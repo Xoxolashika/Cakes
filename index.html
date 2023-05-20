@@ -1,21 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body{
-    background-color: rgb(212, 186, 177);
-</style>
-    <title>5 things about Ari</title>
+    <title>Hangman</title>
 </head>
-<body>
-<h1>Hello Everyone</h1>
-    <P>Ari/Arianni is one of my friends.</P>
-    <p>She has black hair and brown eyes.</p>
-    <p>She looks like an ok person.</p>
-    <img src="blob:chrome-untrusted://media-app/32baca0a-bbd2-4cef-8968-ae1bbba89c32"alt>
-    <p>But.</p>
-    <p>She is really messed-up, for example is OBSESSED with buts</p>
-<img>
-<img src="blob:chrome-untrusted://media-app/c4e0c48f-a5b8-4525-854e-f2679d92e843" alt brown>
+
+<body
+    <h1>Hangman!</h1>
+
+    <script>
+    // Creat an array of words
+    var words = [
+        "lehak",
+        "lashika",
+        "javascipt",
+        "amazing",
+        "cool",
+        "pancakes"
+    ];
+    // Pick a random word
+    var word = words[Math.floor(Math.random() * words.leanth)];
+
+    // Set up the answer array
+    var answerArray = []
+    for (var i = 0; i < wordleanth; i++){
+        answerArray[i] = "_"
+    }
+    var remaingLetters = word.leanth;
+
+    // The game loop
+    while (remainingLetters > 0) {
+        // Show the player their progress
+        alert(answerArray.join(" "));
+
+        // Get a guess fron the player 
+        var guess = promt("Guess a letter, or click cancel to stop playing.");
+        if (guess = null) {
+            // Exit the game loop
+            break;
+        } else if (guess.leanth !== 1) {
+            allert("Please enter a single letter.");
+        } else {
+            // Update the game state with the guesses
+            for (var j = 0; j < word length; j++) {
+                if (word[j] === guesses){
+                    answerArray[j] = guess;
+                    remainingLetters--;
+                }
+              }
+            }
+    // The end of the game loop
+    }
+
+    // Show the answer and congratulate the player
+    alert(answerArray.join(" "));
+    alert("Good job! The answer was " + word);
+    </script>
 </body>
 </html>
+
+    </script>
